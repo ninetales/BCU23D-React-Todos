@@ -5,8 +5,12 @@ export const TodoFilter = ({ sortList }) => {
     <div className="todo-filter-container">
       <label>
         <span>Sort by:</span>
-        <select name="filter" onChange={(e) => sortList(e)}>
-          <option value="" selected disabled>
+        <select
+          name="filter"
+          onChange={(e) => sortList(e)}
+          defaultValue="select"
+        >
+          <option value="select" disabled>
             Select
           </option>
           <option value="done-first">Done todos first</option>

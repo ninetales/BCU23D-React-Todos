@@ -12,9 +12,11 @@ export default class HttpClient {
                 return response.json();
             } else {
                 console.error(`Error fetching data: ${response.status}`);
+                return null;
             }
         } catch (error) {
             console.error(error);
+            return null;
         }
     }
 
