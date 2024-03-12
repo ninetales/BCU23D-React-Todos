@@ -4,6 +4,7 @@ import { TodoList } from './TodoList';
 import { useEffect } from 'react';
 import { getDummyData } from '../services/todoService';
 import { Item } from '../models/Item';
+import { TodoFilter } from './TodoFilter';
 
 export const TodoApp = () => {
   const [todos, setTodos] = useState(
@@ -37,13 +38,34 @@ export const TodoApp = () => {
     setTodos(JSON.parse(localStorage.getItem('todos')));
   };
 
+  const sortList = (e) => {
+    console.log(e.target.value);
+    const tempList = [...todos];
+    switch (e.target.value) {
+      case 'done-first':
+        tempList.sort(function (a, b) {
+          return b.done - a.done;
+        });
+        break;
+      case 'done-last':
+        tempList.sort(function (a, b) {
+          return a.done - b.done;
+        });
+        break;
+    }
+
+    localStorage.setItem('todos', JSON.stringify(tempList));
+    setTodos(JSON.parse(localStorage.getItem('todos')));
+  };
+
   return (
-    <div>
+    <div className="todo-container">
       {todos.length === 0 ? (
         <span>Loading ToDo...</span>
       ) : (
         <>
           <TodoForm addItem={addItem} />
+          <TodoFilter sortList={sortList} />
           <TodoList
             listItems={todos}
             checkItem={checkItem}

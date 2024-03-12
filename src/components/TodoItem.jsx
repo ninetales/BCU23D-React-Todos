@@ -9,7 +9,7 @@ export const TodoItem = ({ itemData, checkItem, removeItem }) => {
         onChange={() => checkItem(itemData._id)}
         checked={itemData.done}
       />
-      <span>{itemData.task}</span>
+      <p>{itemData.task}</p>
       <button onClick={() => removeItem(itemData._id)}>
         <Trash />
       </button>

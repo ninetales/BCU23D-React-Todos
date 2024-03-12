@@ -28,7 +28,7 @@ Api:t ovanför kräver att ni har en api-nyckel. Ni kan prova att göra era egna
 - ✅ Ni använder er av Lifting State Up
 - ✅ Ni skall kunna skriva in egna todos
 - ✅ Ni skall visa även klara händelser och kunna göra så att de blir "oklara" igen
-- Ni skall kunna sortera er lista på något sätt, hur och på vad är upp till er
+- ✅ Ni skall kunna sortera er lista på något sätt, hur och på vad är upp till er
 
 ## Förslag
 

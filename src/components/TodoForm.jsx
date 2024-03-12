@@ -1,4 +1,5 @@
 import React from 'react';
+import { Plus } from 'iconoir-react';
 
 export const TodoForm = ({ addItem }) => {
   const formHandler = (e) => {
@@ -11,9 +12,11 @@ export const TodoForm = ({ addItem }) => {
   };
 
   return (
-    <form onSubmit={(e) => formHandler(e)}>
-      <input type="text" placeholder="Todo" name="todo" />
-      <button>Add Todo</button>
+    <form onSubmit={(e) => formHandler(e)} className="todo-form">
+      <input type="text" placeholder="New task" name="todo" />
+      <button>
+        <Plus />
+      </button>
     </form>
   );
 };
