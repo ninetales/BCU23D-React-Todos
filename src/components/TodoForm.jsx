@@ -6,7 +6,7 @@ export const TodoForm = ({ addItem }) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const todo = formData.get('todo');
-    console.log('send form!', todo);
+
     addItem(todo);
     e.target.reset();
   };

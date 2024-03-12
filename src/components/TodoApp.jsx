@@ -39,7 +39,6 @@ export const TodoApp = () => {
   };
 
   const sortList = (e) => {
-    console.log(e.target.value);
     const tempList = [...todos];
     switch (e.target.value) {
       case 'done-first':
