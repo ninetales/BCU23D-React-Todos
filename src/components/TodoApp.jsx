@@ -60,7 +60,12 @@ export const TodoApp = () => {
   return (
     <div className="todo-container">
       {todos.length === 0 ? (
-        <span>Loading ToDo...</span>
+        <div className="loading-container">
+          <div className="loader">
+            <img src="/loading.gif" alt="Loading..." />
+            <span>Loading Todos...</span>
+          </div>
+        </div>
       ) : (
         <>
           <TodoForm addItem={addItem} />

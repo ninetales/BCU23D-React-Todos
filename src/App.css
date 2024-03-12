@@ -44,6 +44,27 @@ span {
   max-width: 500px;
 }
 
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: .5rem;
+  color: #3991bb;
+}
+
+.loader img {
+  height: 100%;
+  max-width: 50px;
+}
+
 .todo-form {
   display: grid;
   grid-template-columns: 1fr auto;
