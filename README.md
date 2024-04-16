@@ -2,6 +2,8 @@
 
 # Todos
 
+!['App'](./todos.png)
+
 En inlämningsuppgift för BCU. I denna uppgift skall ni alltså bygga en todo-lista i react. Ni har fått detta projekt som mall så att alla har någonting att utgå ifrån. Men, ingenting mer än själva projektet har gjorts. Nu skall ni, genom att använda alla koncept vi har pratat om hittills i kursen, skapa en todo-lista.
 
 ## API
